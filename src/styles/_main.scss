@@ -1,0 +1,185 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  // font-family: $sans-serif;
+  background-color: #fff;
+  * {
+    outline: none;
+  }
+  *::-moz-selection {
+    color: $white;
+    background: $red;
+    text-shadow: none;
+  }
+  *::selection {
+    color: $white;
+    background: $red;
+    text-shadow: none;
+  }
+}
+
+// HTML Elements
+
+.overline {
+  color: $white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.matro {
+  display: block;
+  text-align: center;
+  padding-bottom: 2rem;
+  font-family: $matro;
+  font-size: 3rem;
+  color: #ffe100;
+}
+
+
+// Paragraph
+
+p {
+  font-size: 1rem;
+  // font-family: $sans-serif-book;
+  strong {
+    // font-family: $sans-serif-bold;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+  line-height: 1.5rem;
+  color: $dark-grey;
+  &.small {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
+
+main {
+  margin: 0 auto 0 0;
+}
+
+// Section Class
+
+.section {
+  padding-top: $spaceLG;
+  padding-bottom: $spaceLG;
+  padding-right: $spaceSM;
+  padding-left: $spaceSM;
+  @include tablet {
+    padding-top: $spaceLG;
+    padding-bottom: $spaceLG;
+    padding-right: clamp(6rem, 8.333333%, 8.333333%);
+    padding-left: clamp(6rem, 8.333333%, 8.333333%);
+  }
+  @include desktop {
+    padding-top: $spaceLG;
+    padding-bottom: $spaceLG;
+    padding-right: clamp(8rem, 8.333333%, 8.333333%);
+    padding-left: clamp(8rem, 8.333333%, 8.333333%);
+  }
+}
+
+//Map-Pfeil
+.map-arrow {
+  position: absolute;
+}
+
+// Button
+
+.button {
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  height: 3em;
+  background-color: transparent;
+  border-color: #ffe100;
+  color: #000000;
+  background-color: #ffe100;
+}
+.button:hover {
+  background-color: #ffe100;
+  transform: scale(1.10, 1.10);
+  border-color: #ffe100;
+}
+
+.button-secondary {
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  height: 3em;
+  background-color: transparent;
+  border-color: #ffe100;
+  color: #ffe100;
+  border-radius: 3rem;
+}
+.button-secondary:hover {
+  background-color: #ffe100;
+  color: #000000;
+  transform: scale(1.5, 1.5);
+}
+
+// Layout Alignments
+
+.is-centered-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-centered-row-touch {
+  @include touch {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.is-centered-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.is-self-centered-row {
+  justify-self: center;
+}
+.is-self-centered-col {
+  align-self: center;
+}
+.is-self-start-col {
+  align-self: flex-start;
+}
+
+.is-mobile-reverse-col {
+  @include touch {
+      display: flex;
+      flex-direction: column-reverse;
+  }
+}
+
+.is-desktop-reverse-row {
+  @include desktop {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.is-tablet-reverse-row {
+  @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+  }
+}

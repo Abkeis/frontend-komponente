@@ -1,0 +1,97 @@
+.map {
+  background-color: $darkblue;
+  padding: 1rem;
+  @include tablet {
+    padding: 4rem;
+  }
+
+  h3 {
+    display: block;
+    text-align: left;
+    @include tablet {
+      padding: unset;
+      margin: unset;
+      font-size: 1.1rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    display: block;
+    text-align: left;
+    @include tablet {
+      padding: unset;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+    }
+    @include desktop {
+      font-size: 3rem;
+    }
+  }
+
+  .legend {
+    padding: 2rem;
+
+    @include tablet {
+      padding: unset;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    @include desktop {
+      margin-left: 2rem;
+      margin-top: 8rem;
+    }
+    .legend-wrapper {
+      max-width: 25rem;
+      margin-top: 3rem;
+      display: block;
+      text-align: left;
+      @include tablet {
+        margin: unset;
+      }
+      .legend-item {
+        margin-bottom: 6rem;
+        display: block;
+        margin-left: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &:nth-child(1) {
+          border-top: solid rgb(30, 101, 30);
+          border-bottom: solid rgb(30, 101, 30);
+        }
+        &:nth-child(2) {
+          border-top: solid #0d6291;
+          border-bottom: solid #0d6291;
+        }
+        &:nth-child(3) {
+          border-top: solid #ffe100;
+          border-bottom: solid #ffe100;
+        }
+        @include tablet {
+          margin-bottom: 4rem;
+        }
+        @include desktop {
+          margin-bottom: 6rem;
+        }
+
+        .map-tours {
+          position: relative;
+          left: 0;
+          display: block;
+          text-align: left;
+        }
+        .map-tours:hover {
+          color: #ffe100;
+          cursor: pointer;
+          text-decoration: revert;
+        }
+        .tour_color {
+          color: $white;
+        }
+      }
+    }
+  }
+}

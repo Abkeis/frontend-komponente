@@ -1,0 +1,58 @@
+//Fonts 
+@font-face {
+    font-family: "Matro";
+    src: local('Matro'), url('../fonts/ffad_matro-webfont.woff') format('woff');
+    font-display: swap;
+}
+
+// Font Families
+$matro: "Matro", Verdana, Tahoma, Arial, Helvetica, sans-serif;
+$sans-serif-light: "Gotham Light", Verdana, Tahoma, Arial, Helvetica, sans-serif;
+$sans-serif-bold: "Gotham Bold*", Verdana, Tahoma, Arial, Helvetica, sans-serif;
+$sans-serif-book: "Gotham Book", Verdana, Tahoma, Arial, Helvetica, sans-serif;
+
+$tablet: 768px;
+// Font Families
+$sans-serif: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+
+// Text Color
+$text: #000;
+// Links
+$link: #000;
+
+// Colors
+$white: #fff;
+$black: #000;
+$darkblue: #132634;
+$light-grey: #F3F3F2;
+$grey: #8F8E8E;
+$med-grey: #C1C1C1;
+$med-dark-grey: #707070;
+$dark-grey: #333333;
+
+// Spacing
+$spaceXS: .5rem;
+$spaceSM: 1rem;
+$spaceMD: 1.5rem;
+$spaceLG: 3rem;
+$spaceXL: 6rem;
+
+// Mixins
+
+@mixin mobile-s {
+    @media screen and (min-width: 320px) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media screen and (min-width: 375px) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media screen and (min-width: 425px) {
+        @content;
+    }
+}
