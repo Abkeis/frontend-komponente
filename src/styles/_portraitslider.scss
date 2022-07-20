@@ -1,0 +1,14 @@
+.portraitslider {
+  background-color: $darkblue;
+
+  .expeditions {
+    .portrait-text {
+      margin: 0 1rem;
+      span {
+        text-align: left;
+        color: $white;
+        display: block;
+      }
+    }
+  }
+}

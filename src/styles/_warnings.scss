@@ -1,0 +1,46 @@
+.warnings {
+  background-color: $darkblue;
+
+  .container {
+    background-color: $darkblue;
+
+    .text-box-sm {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 40rem;
+    }
+    .header-text {
+      margin-top: 3rem;
+      padding-bottom: 4rem;
+    }
+    
+    .subtitle {
+      color: white;
+      text-transform: uppercase;
+      font-family: sans-serif;
+    }
+
+     p  {
+      color: $white;
+      font-family: sans-serif;
+      margin-top: 3rem;
+    }
+
+    .img {
+      max-width: 6em;
+      max-height: 6em;
+      margin: auto;
+    }
+
+    .label {
+      color: white;
+      font-style: inherit;
+      font-weight: inherit;
+      font-family: sans-serif;
+    }
+
+    .warnings-btn {
+      margin-top: 2rem;
+    }
+  }
+}

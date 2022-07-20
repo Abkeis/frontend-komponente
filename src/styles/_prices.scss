@@ -1,0 +1,229 @@
+.prices {
+  background-color: $darkblue;
+  padding: 1rem;
+
+  .overline {
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .matro {
+    display: block;
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: $matro;
+    font-size: 3rem;
+    color: #ffe100;
+  }
+
+  .prices-item {
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    @include tablet {
+      border-radius: 1rem;
+      max-width: 100%;
+      height: auto;
+      background-color: #ffffff;
+    }
+    @include desktop {
+      padding: 0 1.5rem;
+      border-radius: 1rem;
+      margin: 2rem 5rem;
+      max-width: 100%;
+      height: auto;
+      background-color: #ffffff;
+    }
+  }
+  .header-text {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 2rem;
+
+    span {
+      font-size: 0.75rem;
+      color: #132634;
+      display: block;
+    }
+
+    .headline {
+      font-family: sans-serif;
+      margin-top: 2rem;
+      font-size: 1rem;
+      color: #000000;
+      display: block;
+      @include tablet {
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    .title-prices {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 3.5rem;
+      text-align: left;
+      @include tablet {
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        margin-right: 2rem;
+        text-align: right;
+      }
+      @include desktop {
+        margin-right: 1rem;
+        margin-top: 3.5rem;
+      }
+    }
+  }
+
+  .price-name {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .price {
+    font-size: 1.1rem;
+    width: max-content;
+  }
+
+  .arrow-icon {
+    border: solid #000000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+    height: 0.75rem;
+    width: 0.75rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 4.6rem;
+    &.active {
+      transform: rotate(225deg);
+      top: 5rem;
+    }
+    @include tablet {
+      top: 4.4rem;
+      right: 1rem;
+    }
+    @include desktop {
+      top: 4.6rem;
+    }
+  }
+
+  .content {
+    padding-top: 2rem;
+    @include desktop {
+      padding-top: 2rem;
+      padding-right: 4rem;
+    }
+  }
+  .included-text {
+    font-size: 1rem;
+  }
+
+  .border-top {
+    border-top: 1px solid #2a2c2b;
+  }
+  .border-left {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      top: 4rem;
+    }
+    @include desktop {
+      position: relative;
+      top: 2rem;
+      margin-bottom: 3rem;
+      border-left: 1px solid #2a2c2b;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .included {
+    background: #f3f3f3;
+    margin-top: 2rem;
+    padding: 1rem 1rem;
+    @include desktop {
+      background: #f3f3f3;
+      padding: 1.5rem 2rem;
+      margin-top: 2rem;
+      margin-right: 4rem;
+    }
+
+    .head {
+      padding-bottom: 1em;
+    }
+
+    .included-head {
+      font-family: sans-serif;
+      font-size: 1.2rem;
+    }
+    p {
+      display: list-item;
+    }
+  }
+
+  .prices-details {
+    flex-grow: 1;
+    @include tablet {
+      flex-grow: 1;
+      margin-top: 2rem;
+    }
+    @include desktop {
+      flex-grow: 1;
+      margin-top: 0;
+    }
+    svg {
+      width: 1rem;
+      filter: invert(100%) sepia(0%) saturate(4770%) hue-rotate(114deg)
+        brightness(88%) contrast(86%);
+    }
+    [tooltip]:before {
+      content: attr(tooltip);
+      position: absolute;
+      opacity: 0;
+      left: 2rem;
+      top: 1rem;
+      width: 200px;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1px 2px 1pxrgba (0, 1, 0, 0.2);
+      border-radius: 8px;
+      font-size: 0.7rem;
+      z-index: 9999;
+      color: #000000;
+      background: #ffe100;
+      transition: all 0.5s ease;
+    }
+
+    [tooltip]:hover:before {
+      opacity: 1;
+    }
+
+    [tooltip] {
+      position: relative;
+      bottom: 0.5rem;
+    }
+  }
+
+  .check-btn {
+    display: inline-flex;
+    flex-grow: 0;
+    margin: 2rem auto auto auto;
+    @include tablet {
+      flex-grow: 0;
+      width: 14rem;
+    }
+    @include desktop {
+      flex-grow: 0;
+      width: 16rem;
+    }
+  }
+}

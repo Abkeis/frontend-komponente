@@ -1,0 +1,4 @@
+WP_API_URL=https://api.tao2022.aleksundshantu.com
+# Separate domains with a comma, do not add spaces
+IMAGES_DOMAINS=api.tao2022.aleksundshantu.com,api.tao2022.com
+WP_FRONTEND_URL=http://localhost:3000

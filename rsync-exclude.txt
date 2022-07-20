@@ -1,0 +1,7 @@
+/.git
+/.eslintrc.json
+/.gitignore
+/.gitlab-ci.yml
+/env
+/README.md
+/rsync-exclude.txt
